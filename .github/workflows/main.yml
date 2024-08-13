@@ -11,7 +11,7 @@ jobs:
       - name: Check Permissions
         uses: mokhlesurr031/github-action-by-permission@v2.1
         with:
-          permissions-file: 'permissions.yml'
+          permissions-file: 'user-permissions.yml'
 
       - name: Echo Something
         run: echo "Hello World!"
