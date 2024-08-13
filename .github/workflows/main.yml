@@ -1,0 +1,17 @@
+name: Test Action Trigger Permissions
+on:
+  workflow_dispatch:
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check Permissions
+        uses: mokhlesurr031/github-action-by-permission@v2.0
+        with:
+          permissions-file: 'permissions.yml'
+
+      - name: Echo Something
+        run: echo "Hello World!"
